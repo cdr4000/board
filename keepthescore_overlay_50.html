@@ -8,25 +8,25 @@
       margin: 0;
       overflow: hidden;
       background: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;   /* allinea in alto */
     }
-    .scaled {
-      transform: scale(0.5);
-      <!-- transform-origin: top left; -->
+    .wrapper {
+      position: absolute;
+      top: 0;                   /* attaccato in alto */
+      left: 50%;                /* spostato a metà */
+      transform: translateX(-50%) scale(0.5); /* centrato orizzontalmente + ridotto al 50% */
       transform-origin: top center;
     }
   </style>
 </head>
 <body>
-  <!-- Sostituisci l'URL qui sotto con il tuo "Public link" di Keepthescore -->
-  <iframe 
-    src="https://keepthescore.com/scoreboard/vybsdhkkdnspr/" 
-    frameborder="0" 
-    width="2000" 
-    height="1000" 
-    class="scaled">
-  </iframe>
+  <!-- Sostituisci l'URL con il tuo Public link di Keepthescore -->
+  <div class="wrapper">
+    <iframe 
+      src="https://keepthescore.com/board/xxxxxxxxxx/" 
+      frameborder="0" 
+      width="2000" 
+      height="1000">
+    </iframe>
+  </div>
 </body>
 </html>
